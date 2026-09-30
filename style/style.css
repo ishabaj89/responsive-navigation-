@@ -1,0 +1,421 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #2d2520;
+
+    background-color: #fffaf5;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+    min-height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: #3b2418;
+}
+
+
+/* Logo */
+
+.logo {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+.logo:hover {
+    color: #ffd6a5;
+}
+
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+.nav-links {
+    display: flex;
+
+    gap: 10px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.nav-links a {
+    display: block;
+
+    min-height: 42px;
+
+    padding: 10px 14px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #68432e;
+
+    color: #ffd6a5;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+/* Hidden on desktop */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* Remove default triangle */
+
+.hamburger {
+    list-style: none;
+}
+
+
+.hamburger::-webkit-details-marker {
+    display: none;
+}
+
+
+/* Hamburger button */
+
+.hamburger {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+
+/* Three hamburger lines */
+
+.hamburger span {
+    display: block;
+
+    width: 28px;
+
+    height: 3px;
+
+    background-color: white;
+
+    border-radius: 3px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background-color: #f4d7b8;
+}
+
+
+.eyebrow {
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+.hero h1 {
+    margin: 10px 0;
+
+    font-size: clamp(35px, 6vw, 70px);
+}
+
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* Button */
+
+.button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 20px;
+
+    background-color: #3b2418;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+
+.button:hover,
+.button:focus {
+    background-color: #68432e;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+
+.section h2 {
+    font-size: 35px;
+}
+
+
+/* Menu background */
+
+.menu-section {
+    max-width: none;
+
+    background-color: #f8eadc;
+}
+
+
+/* =========================
+   MENU CARDS
+========================= */
+
+.cards {
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.card {
+    flex: 1 1 220px;
+
+    max-width: 300px;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #3b2418;
+
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media screen and (max-width: 600px) {
+
+
+    /* Hide desktop navigation */
+
+    .nav-links {
+        display: none;
+    }
+
+
+    /* Show hamburger */
+
+    .mobile-menu {
+        display: block;
+
+        position: relative;
+    }
+
+
+    /* Mobile menu */
+
+    .mobile-links {
+        position: absolute;
+
+        top: 55px;
+
+        right: 0;
+
+        width: 220px;
+
+        margin: 0;
+
+        padding: 10px;
+
+        list-style: none;
+
+        background-color: #3b2418;
+
+        border-radius: 8px;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* Mobile links */
+
+    .mobile-links a {
+        display: block;
+
+        min-height: 48px;
+
+        padding: 12px;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-weight: bold;
+    }
+
+
+    .mobile-links a:hover,
+    .mobile-links a:focus {
+        background-color: #68432e;
+
+        color: #ffd6a5;
+
+        border-radius: 5px;
+    }
+
+
+    /* Smaller logo on mobile */
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    /* Smaller heading */
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    .section {
+        padding: 50px 20px;
+    }
+
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+
+    .card {
+        max-width: 100%;
+    }
+
+}
